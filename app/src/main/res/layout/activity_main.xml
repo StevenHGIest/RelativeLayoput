@@ -24,17 +24,18 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
+        android:id="@+id/tvLegendCanal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Canal 5"
         android:layout_below="@+id/tvCanal"
         android:layout_toStartOf="@+id/ivContinuara"
-        android:textStyle="bold"
-        android:textSize="32dp"
+        android:text="Canal 5"
         android:textAlignment="center"
-        />
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/redondo"
         android:id="@+id/btnCambiar"
         android:text="Cambiar"
         android:layout_above="@id/tvCanal"
@@ -46,20 +47,22 @@
         android:layout_marginStart="16dp"
 
         />
+
     <EditText
-        android:layout_toStartOf="@id/btnCambiar"
-        android:layout_marginEnd="16dp"
-        android:layout_above="@id/tvCanal"
+        android:id="@+id/etCanal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@id/tvCanal"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-    />
+        android:layout_toStartOf="@id/btnCambiar"
+        />
 
     <Spinner
-        android:layout_alignParentTop = "true"
-        android:layout_centerHorizontal="true"
-        android:entries="@array/programas"
+        android:id="@+id/spProgramas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/programas" />
 </RelativeLayout>
