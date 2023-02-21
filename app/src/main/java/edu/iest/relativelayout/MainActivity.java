@@ -17,7 +17,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    ImageView  ivContinuara = findViewById(R.id.ivContinuara);
+    ImageView  ivContinuara;
     String spText;
 
     @Override
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+        ivContinuara = findViewById(R.id.ivContinuara);
         Button bnCanal = findViewById(R.id.btnCambiar);
         EditText etCanal = findViewById(R.id.etCanal);
         TextView tvCanal = findViewById(R.id.tvCanal);
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, DatosActivity.class);
                 i.putExtra("programa", spText);
-                i.putExtra("canal", etCanal.toString());
+                i.putExtra("canal", etCanal.getText().toString());
                 startActivity(i);
             }
         });
