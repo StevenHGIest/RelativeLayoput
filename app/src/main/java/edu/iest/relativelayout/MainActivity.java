@@ -1,8 +1,10 @@
 package edu.iest.relativelayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,8 +32,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         EditText etCanal = findViewById(R.id.etCanal);
         TextView tvCanal = findViewById(R.id.tvCanal);
         Spinner spProgramas = findViewById(R.id.spProgramas);
+        // Se puede hacer en botones, edittext y textviews
+        // Cambiar color y el fondo por codigo, es similar en kotlin
+        tvCanal.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
+        tvCanal.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
 
-       spProgramas.setOnItemSelectedListener(this);
+        //tambien podemos hacerlo por:
+        tvCanal.setBackgroundColor(Color.parseColor("#FFF012"));
+        spProgramas.setOnItemSelectedListener(this);
         bnCanal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
